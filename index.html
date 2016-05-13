@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: rgba(135,206,235,0.3);
+        }
+        ul {
+            margin: 100px 400px;
+            list-style: none;
+        }
+        li {
+            width: 100px;
+            height: 40px;
+            position: relative;
+            float: left;
+            font: 700 16px/40px "microsoft yahei";
+            text-align: center;
+            /*perspective: 1000px;*/  /*过程当中做个辅助而已*/
+            transform-style: preserve-3d;
+            transition: all 1s;
+        }
+        li span {
+            position: absolute;  /*让子元素的坐标轴重合*/
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: #131b24;
+        }
+        li span:first-child {
+            background-color: yellow;
+            transform: rotateX(90deg) translateZ(20px);
+        }
+        li span:last-child {
+            background-color: skyblue;
+            transform: translateZ(20px); /*让其沿Z轴往外拉20px；*/
+        }
+        li:hover {
+            transform: rotateX(-90deg);
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><span>事竟成</span><span>有志者</span></li>
+    <li><span>事竟成</span><span>有志者</span></li>
+    <li><span>事竟成</span><span>有志者</span></li>
+    <li><span>事竟成</span><span>有志者</span></li>
+    <li><span>事竟成</span><span>有志者</span></li>
+</ul>
+</body>
+</html>
